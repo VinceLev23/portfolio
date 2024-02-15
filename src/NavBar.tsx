@@ -1,13 +1,16 @@
-import React from "react";
 import LinkedIn from "./components/LinkedIn";
-import { Avatar, Button, Container } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import './App.css';
+import NavBarButton from "./NavBarButton";
+
 
 export default function NavBar() {
-    return <>
+
+    return (
         <Container
             sx={{
                 display: "flex",
+                minWidth: "100%",
                 flexDirection: "row",
                 alignItems: "center",
                 alignContent: "center",
@@ -17,11 +20,11 @@ export default function NavBar() {
                 padding: 2
             }}
         >
-            <Button>CV</Button>
-            <Button>À propos</Button>
-            <Button>Projets</Button>
+            <NavBarButton to={"/"} text={"Home"} />
+            <NavBarButton to={"/cv"} text={"CV"} />
+            <NavBarButton to={"/apropos"} text={"À Propos"} />
+            <NavBarButton to={"/projets"} text={"Projets"} />
             <LinkedIn></LinkedIn>
-            <Avatar sx={{ width: 28, height: 28 }} src="src\assets\MyPic.jpg" alt="Vince Léveillé" />
         </Container>
-    </>
+    )
 }
