@@ -1,7 +1,7 @@
 import LinkedIn from "./components/LinkedIn";
 import { Button, Container } from "@mui/material";
 import './App.css';
-import NavBarButton from "./NavBarButton";
+import NavBarButton from "./components/NavBarButton";
 
 
 export default function NavBar() {

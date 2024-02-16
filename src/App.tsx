@@ -4,7 +4,6 @@ import NavBar from './NavBar';
 import Home from './Home'
 import CV from './CV';
 import path from 'path';
-import Root from './Root';
 import Projets from './Projets';
 import Apropos from './APropos';
 
@@ -14,7 +13,7 @@ function App() {
       <>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Root />} />
+          <Route path="/" element={<Home />} />
           <Route path="/cv" element={<CV />} />
           <Route path="/apropos" element={<Apropos />} />
           <Route path="/Projets" element={<Projets />} />
