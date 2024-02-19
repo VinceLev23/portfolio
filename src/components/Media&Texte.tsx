@@ -32,7 +32,7 @@ export default function MediaTexte() {
                 backgroundColor: "#EFE1DD"
             }}
             >
-                <h1>Front End Developper</h1>
+                <h1>Développeur Front-End</h1>
             </Container>
             <Container sx={{
                 display: "flex",
