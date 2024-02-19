@@ -12,8 +12,6 @@ export default function MediaTexte() {
         <div>
             Développeur Web Front-End passionné, avide de résoudre des énigmes
             numériques et de repousser les limites de la créativité.
-            Chaque ligne de code est une toile vierge sur laquelle je peins
-            des expériences utilisateur uniques et des interfaces engageantes.
             Je m'immerge dans les défis du développement pour mieux les dompter,
             et chaque obstacle est une opportunité d'apprentissage. Car pour moi,
             le développement web est bien plus qu'une simple compétence technique :
