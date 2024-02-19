@@ -6,11 +6,16 @@ interface NavBarButtonProps {
     text: string;
 }
 
+const buttonStyle = {
+    color: "#DAE9CF"
+}
+
 export default function NavBarButton(props: NavBarButtonProps) {
     return (
         <Button
             component={Link}
             to={props.to}
+            sx={buttonStyle}
         >
             {props.text}
         </Button>

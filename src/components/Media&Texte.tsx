@@ -1,20 +1,34 @@
 import { Container } from "@mui/material";
+import MyPhoto from "../assets/Profile.jpg"
+import CV from "../Pages/CV";
+import PDF_URL from "../assets/CV Vincent Léveillé.pdf"
+
 
 export default function MediaTexte() {
 
-    const image = <img src="https://www.shutterstock.com/image-photo/profile-picture-smiling-successful-young-260nw-2040223583.jpg" />
+    const image = <img
+        src={MyPhoto}
+        style={{
+            width: 325,
+            height: 350,
+            borderRadius: 55,
+        }} />
+
     const myText = <div>
-        <h2>What is Lorem Ipsum?</h2>
-        <div>Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting, remaining
-            essentially unchanged. It was popularised in the 1960s with
-            the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum."</div>
+        <h3>Réinventer le Web, Ligne par Ligne</h3>
+        <div>
+            Développeur Web Front-End passionné, avide de résoudre des énigmes
+            numériques et de repousser les limites de la créativité.
+            Chaque ligne de code est une toile vierge sur laquelle je peins
+            des expériences utilisateur uniques et des interfaces engageantes.
+            Je m'immerge dans les défis du développement pour mieux les dompter,
+            et chaque obstacle est une opportunité d'apprentissage. Car pour moi,
+            le développement web est bien plus qu'une simple compétence technique :
+            c'est une passion qui alimente ma soif de connaissance et d'innovation.
+            Prêt à explorer de nouveaux horizons et à transformer des idées en
+            réalité digitale, je suis ici pour façonner l'avenir du web, une ligne
+            de code à la fois.
+        </div>
     </div>
 
     return (
@@ -24,24 +38,24 @@ export default function MediaTexte() {
                 justifyContent: "center",
                 marginTop: 5,
                 border: 2,
-                backgroundColor: "lightgray"
+                backgroundColor: "#EFE1DD"
             }}
             >
-                <h1>Who is this handsome man ?</h1>
+                <h1>Front End Developper</h1>
             </Container>
             <Container sx={{
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",
                 alignContent: "center",
-                minWidth: "100%",
+                width: "100%",
                 marginTop: 5,
-                backgroundColor: "lightgray"
+                backgroundColor: "#EFE1DD"
             }}>
-
                 <Container
                     sx={{
                         display: "flex",
+                        flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "center",
                         marginLeft: "10%",
@@ -49,14 +63,17 @@ export default function MediaTexte() {
                     }}
                 >
                     {myText}
+                    <CV pdfUrl={PDF_URL} />
                 </Container>
+
                 <Container
                     sx={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         marginRight: "10%",
-                        padding: 2
+                        padding: 2,
+
                     }}>
                     {image}
                 </Container>

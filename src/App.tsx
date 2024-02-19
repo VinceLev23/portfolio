@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Router, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavBar from './NavBar';
-import Home from './Home'
-import CV from './CV';
-import path from 'path';
-import Projets from './Projets';
-import Apropos from './APropos';
+import NavBar from './components/NavBar';
+import Home from './Pages/Home'
+import Projets from './Pages/Projets';
+import Apropos from './Pages/APropos';
+
+
 
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cv" element={<CV />} />
           <Route path="/apropos" element={<Apropos />} />
           <Route path="/Projets" element={<Projets />} />
         </Routes>

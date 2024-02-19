@@ -10,6 +10,6 @@ export default function LinkedIn() {
     }
 
     return <>
-        <Button onClick={handleClick}><LinkedInIcon /></Button>
+        <Button onClick={handleClick}><LinkedInIcon sx={{ color: "#EFE1DD" }} /></Button>
     </>
 }
