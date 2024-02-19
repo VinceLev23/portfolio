@@ -18,29 +18,28 @@ export default function NavBar() {
             <Container
                 sx={{
                     display: "flex",
-                    width: "100%",
                     flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "10px",
                     backgroundColor: "#262626",
                 }}
             >
                 <Box
-                    display={"flex"}
                     component="img"
                     src={Logo}
                     sx={{
-                        height: 75,
-                        borderRadius: 50,
-                        ":hover": {
-                            cursor: "pointer"
-                        }
+                        height: { xs: 50, sm: 60, md: 70, lg: 75 },
+                        width: "auto",
+                        borderRadius: "50%",
+                        cursor: "pointer"
+
                     }}
-                    marginRight={"auto"}
                     onClick={handleClickLogo}
                 >
                 </Box>
+                <LinkedIn />
 
-
-                <LinkedIn></LinkedIn>
             </Container>
         </>
     )

@@ -6,13 +6,6 @@ import PDF_URL from "../assets/CV Vincent Léveillé.pdf"
 
 export default function MediaTexte() {
 
-    const image = <img
-        src={MyPhoto}
-        style={{
-            width: 325,
-            height: 350,
-            borderRadius: 55,
-        }} />
 
     const myText = <div>
         <h3>Réinventer le Web, Ligne par Ligne</h3>
@@ -45,12 +38,14 @@ export default function MediaTexte() {
             </Container>
             <Container sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: "column-reverse",
                 justifyContent: "center",
                 alignContent: "center",
-                width: "100%",
                 marginTop: 5,
-                backgroundColor: "#EFE1DD"
+                backgroundColor: "#EFE1DD",
+                '@media (min-width: 900px)': {
+                    flexDirection: 'row',
+                },
             }}>
                 <Container
                     sx={{
@@ -58,7 +53,6 @@ export default function MediaTexte() {
                         flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "center",
-                        marginLeft: "10%",
                         paddingBottom: 5
                     }}
                 >
@@ -71,11 +65,18 @@ export default function MediaTexte() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        marginRight: "10%",
                         padding: 2,
-
+                        '@media (max-width: 900px)': {
+                            width: "75%",
+                        },
                     }}>
-                    {image}
+                    <img
+                        src={MyPhoto}
+                        style={{
+                            width: "75%",
+                            height: "auto",
+                            borderRadius: "30%",
+                        }} />
                 </Container>
             </Container>
         </>
