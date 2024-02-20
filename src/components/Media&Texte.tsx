@@ -7,6 +7,14 @@ import PDF_URL from "../assets/CV Vincent Léveillé.pdf"
 export default function MediaTexte() {
 
 
+    const myImage = <img
+        src={MyPhoto}
+        style={{
+            width: "75%",
+            height: "auto",
+            borderRadius: "25%",
+        }} />
+
     const myText = <div>
         <h3>Réinventer le Web, Ligne par Ligne</h3>
         <div>
@@ -68,15 +76,10 @@ export default function MediaTexte() {
                             width: "75%",
                         },
                     }}>
-                    <img
-                        src={MyPhoto}
-                        style={{
-                            width: "75%",
-                            height: "auto",
-                            borderRadius: "25%",
-                        }} />
+                    {myImage}
                 </Container>
             </Container>
+
         </>
     )
 }
