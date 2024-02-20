@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import MyPhoto from "../assets/Profile_soloNB.png"
+import MyPhoto from "../assets/ProfilePic.png"
 import CV from "../Pages/CV";
 import PDF_URL from "../assets/CV Vincent Léveillé.pdf"
 
