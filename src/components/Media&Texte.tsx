@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import MyPhoto from "../assets/Profile.jpg"
+import MyPhoto from "../assets/Profile_soloNB.png"
 import CV from "../Pages/CV";
 import PDF_URL from "../assets/CV Vincent Léveillé.pdf"
 
@@ -73,7 +73,7 @@ export default function MediaTexte() {
                         style={{
                             width: "75%",
                             height: "auto",
-                            borderRadius: "30%",
+                            borderRadius: "25%",
                         }} />
                 </Container>
             </Container>
