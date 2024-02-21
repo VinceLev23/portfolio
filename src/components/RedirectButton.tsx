@@ -8,16 +8,14 @@ interface ButtonProps {
 
 const buttonStyle = {
     color: "#DAE9CF",
+    height: "50%",
     backgroundColor: "#31413D",
-    marginLeft: "auto",
     ":hover": {
         backgroundColor: "#6897AF"
     }
 }
 
 export default function RedirectButton({ url, text }: ButtonProps) {
-
-
     const handleClick = () => {
         window.open(url, '_blank')?.focus();
     }

@@ -1,10 +1,12 @@
-import { Button, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import { motion } from "framer-motion";
-import NavBarButton from "../components/NavBarButton";
 import RedirectButton from "../components/RedirectButton";
+import { Bloodtype } from "@mui/icons-material";
 
 
 export default function Projets() {
+
+
     return (
         <>
             <motion.div
@@ -16,10 +18,9 @@ export default function Projets() {
                 <Container sx={{
                     display: "flex",
                     justifyContent: "center",
-                    alignContent: "center",
                     marginTop: 5,
                     border: 2,
-                    backgroundColor: "#EFE1DD"
+                    backgroundColor: "#EFE1DD",
                 }}
                 >
                     <h1>Mes Projets</h1>
@@ -29,40 +30,67 @@ export default function Projets() {
                     display: "flex",
                     flexDirection: "row",
                     marginTop: 5,
-                    backgroundColor: "#EFE1DD"
+                    backgroundColor: "#EFE1DD",
+                    '@media (max-width: 738px)': {
+                        flexDirection: "column"
+                    }
+
                 }}>
                     <Container sx={{
                         borderRight: 1,
-                        width: "40%"
+                        flexBasis: "60%",
+                        display: "flex",
+                        flexDirection: "column",
+                        '@media (max-width: 738px)': {
+                            border: "none",
+                            flexDirection: "row"
+                        }
                     }}>
-                        <h2>Design Web</h2>
-                        <h5>Outils utilisés</h5>
-                        <ul>
-                            <li>Wix</li>
-                            <li>Rubberduck</li>
-                            <li>Canva</li>
-                            <li>Photoshop</li>
-                        </ul>
+                        <Container >
+                            <h2>Design Web</h2>
+                        </Container>
+                        <Container sx={{
+
+                            '@media (max-width: 738px)': {
+                                marginTop: 2
+                            }
+                        }}>
+                            <b>Outils utilisés</b>
+                            <ul>
+                                <li>Wix</li>
+                                <li>Rubberduck</li>
+                                <li>Canva</li>
+                                <li>Photoshop</li>
+                            </ul>
+                        </Container>
                     </Container>
+
                     <Container sx={{
                         display: "flex",
                         flexDirection: "column",
-                        justifyContent: "center",
-                        alignContent: "center",
+                        justifyContent: "space-evenly",
+
                     }}>
                         <Container sx={{
-                            padding: 2,
                             display: "flex",
-                            flexDirection: "row",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+
+                            '@media (max-width: 428px)': {
+                                flexDirection: "column"
+                            }
                         }}>
-                            <h3 >Magasin général Le Brun</h3>
+                            <h3>Magasin général Le Brun</h3>
                             <RedirectButton url={"https://www.magasingenerallebrun.com/fr"} text={"Voir le site"} />
                         </Container>
                         <Container sx={{
-                            padding: 2,
                             display: "flex",
-                            flexDirection: "row",
-
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            '@media (max-width: 428px)': {
+                                flexDirection: "column",
+                                marginBottom: 2
+                            }
                         }}>
                             <h3>Construction JSM</h3>
                             <RedirectButton url={"https://www.constructionsjsm.ca/"} text={"Voir le site"} ></RedirectButton>
