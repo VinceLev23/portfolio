@@ -13,7 +13,7 @@ export default function NavBar() {
     const handleClickLogo = () => {
         navigate("/")
     }
-    //<NavBarButton to="/projets" text="Projets" ></NavBarButton>
+
     return (
         <>
 
@@ -50,6 +50,7 @@ export default function NavBar() {
                         display: "flex",
                         justifyContent: "flex-end"
                     }}>
+                        <NavBarButton to="/projets" text="Projets" ></NavBarButton>
                         <LinkedIn />
                     </Container>
                 </motion.div>
