@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 
-
 interface ButtonProps {
     url: string;
     text: string;

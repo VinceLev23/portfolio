@@ -1,7 +1,6 @@
 import { Container } from "@mui/material";
-import { motion } from "framer-motion";
 import RedirectButton from "../components/RedirectButton";
-import { Bloodtype } from "@mui/icons-material";
+import UpTransition from "../components/animation/UpTransition";
 
 
 export default function Projets() {
@@ -9,12 +8,7 @@ export default function Projets() {
 
     return (
         <>
-            <motion.div
-                exit={{ opacity: 0, y: 21 }}
-                initial={{ opacity: 0, y: 21 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-            >
+            <UpTransition>
                 <Container sx={{
                     display: "flex",
                     justifyContent: "center",
@@ -98,7 +92,7 @@ export default function Projets() {
                     </Container>
                 </Container>
 
-            </motion.div>
+            </UpTransition>
         </>
     )
 }

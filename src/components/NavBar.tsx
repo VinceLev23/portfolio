@@ -51,6 +51,7 @@ export default function NavBar() {
                         justifyContent: "flex-end"
                     }}>
                         <NavBarButton to="/projets" text="Projets" ></NavBarButton>
+                        <NavBarButton to="/contact" text="Contact" ></NavBarButton>
                         <LinkedIn />
                     </Container>
                 </motion.div>
