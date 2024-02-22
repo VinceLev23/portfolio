@@ -1,6 +1,5 @@
 import { Container } from "@mui/material";
 import RedirectButton from "./RedirectButton";
-import SocialMediaButton from "./SocialMediaButton";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Carousel from "./Carousel";
 import Photo1 from '../assets/UFood/UFood1.png'
@@ -36,6 +35,7 @@ export default function UFood() {
                 }}>
                     <Container >
                         <h2>UFood</h2>
+                        <p>Application pour trouver des restaurants, développer dans le cadre d'un cours à l'université</p>
                     </Container>
                     <Container sx={{
 
@@ -47,6 +47,7 @@ export default function UFood() {
                         <ul>
                             <li>VueJs</li>
                             <li>Vuetify</li>
+                            <li>RestAPI</li>
                             <li>Javascript</li>
                             <li>HTML/CSS</li>
                         </ul>
