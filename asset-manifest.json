@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.cd771346.css",
-    "main.js": "/portfolio/static/js/main.6d256ac0.js",
-    "static/media/CV Vincent Léveillé.pdf": "/portfolio/static/media/CV Vincent Léveillé.57cbd0ee340bbc65bede.pdf",
+    "main.js": "/portfolio/static/js/main.c43f78dd.js",
     "static/media/ProfilePic.png": "/portfolio/static/media/ProfilePic.c866d450f62077522e3e.png",
+    "static/media/CV_portfolio.pdf": "/portfolio/static/media/CV_portfolio.4a9fd2841fdb659b9802.pdf",
     "index.html": "/portfolio/index.html",
     "main.cd771346.css.map": "/portfolio/static/css/main.cd771346.css.map",
-    "main.6d256ac0.js.map": "/portfolio/static/js/main.6d256ac0.js.map"
+    "main.c43f78dd.js.map": "/portfolio/static/js/main.c43f78dd.js.map"
   },
   "entrypoints": [
     "static/css/main.cd771346.css",
-    "static/js/main.6d256ac0.js"
+    "static/js/main.c43f78dd.js"
   ]
 }
