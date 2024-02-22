@@ -33,16 +33,6 @@ export default function MediaTexte() {
         <>
             <Container sx={{
                 display: "flex",
-                justifyContent: "center",
-                marginTop: 5,
-                border: 2,
-                backgroundColor: "#EFE1DD"
-            }}
-            >
-                <h1>Développeur Front-End</h1>
-            </Container>
-            <Container sx={{
-                display: "flex",
                 flexDirection: "column-reverse",
                 justifyContent: "center",
                 alignContent: "center",

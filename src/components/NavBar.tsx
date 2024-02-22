@@ -1,10 +1,12 @@
-import LinkedIn from "./LinkedIn";
+import SocialMediaButton from "./SocialMediaButton";
 import { Box, Container } from "@mui/material";
 import '../App.css';
 import NavBarButton from "./NavBarButton";
 import Logo from "../assets/Logo.jpg"
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 
 
 export default function NavBar() {
@@ -52,7 +54,7 @@ export default function NavBar() {
                     }}>
                         <NavBarButton to="/projets" text="Projets" ></NavBarButton>
                         <NavBarButton to="/contact" text="Contact" ></NavBarButton>
-                        <LinkedIn />
+                        <SocialMediaButton url={"https://www.linkedin.com/in/vincent-leveille30"} text={<LinkedInIcon sx={{ color: "#EFE1DD" }} />} />
                     </Container>
                 </motion.div>
             </Container>

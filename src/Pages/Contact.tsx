@@ -1,6 +1,7 @@
 import { Button, Container } from "@mui/material"
 import UpTransition from "../components/animation/UpTransition";
 import RedirectButton from "../components/RedirectButton";
+import Header from "../components/Header";
 
 const email = "vincent.leveille.1@ulaval.ca"
 export default function Contact() {
@@ -9,16 +10,7 @@ export default function Contact() {
     return (
         <>
             <UpTransition>
-                <Container sx={{
-                    border: 2,
-                    display: "flex",
-                    justifyContent: "center",
-                    marginTop: 5,
-                    backgroundColor: "#EFE1DD"
-                }}
-                >
-                    <h1>Contact</h1>
-                </Container>
+                <Header title="Contact" />
 
 
                 <Container sx={{

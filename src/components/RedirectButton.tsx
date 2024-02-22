@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 interface ButtonProps {
     url: string;
-    text: string;
+    text: string | JSX.Element;
 }
 
 const buttonStyle = {

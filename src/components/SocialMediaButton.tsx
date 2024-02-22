@@ -2,16 +2,19 @@ import { Button } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Route } from "@mui/icons-material";
 
-const url = 'https://www.linkedin.com/in/vincent-leveille30'
 
+type SocialMediaButtonProps = {
+    url: string
+    text?: string | JSX.Element
+}
 
-export default function LinkedIn() {
+export default function SocialMediaButton({ url, text }: SocialMediaButtonProps) {
 
     const handleClick = () => {
         window.open(url, '_blank')?.focus();
     }
 
     return <>
-        <Button onClick={handleClick}><LinkedInIcon sx={{ color: "#EFE1DD" }} /></Button>
+        <Button onClick={handleClick}>{text}</Button>
     </>
 }
