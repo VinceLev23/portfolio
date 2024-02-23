@@ -4,10 +4,19 @@ import Photo1 from '../assets/UGram/UGram1.png';
 import Photo2 from '../assets/UGram/Ugram2.png';
 import Photo3 from '../assets/UGram/UGram3.png';
 import Photo4 from '../assets/UGram/Ugram4.png';
-
+import traductions from "../components/Traductions/Traductions.json";
+import React from "react";
+import { Context } from "../App";
 const photos = [Photo1, Photo2, Photo3, Photo4]
 
 export default function UGram() {
+
+    const [lang, setLang] = React.useContext(Context);
+    const [textes, setTextes] = React.useState<any>({});
+
+    React.useEffect(() => {
+        setTextes(traductions[lang as keyof typeof traductions]);
+    }, [lang]);
 
     return (
         <>
@@ -33,7 +42,7 @@ export default function UGram() {
                 }}>
                     <Container >
                         <h2>UGram</h2>
-                        <p>Application similaire à Instagram développée dans le cadre d'un cours universitaire <b>(En cours de développement)</b></p>
+                        <p>{textes.projetsUGramDescription}</p>
                     </Container>
                     <Container sx={{
 
@@ -41,7 +50,7 @@ export default function UGram() {
                             marginTop: 2
                         }
                     }}>
-                        <b>Outils utilisés</b>
+                        <b>{textes.projetsOutilsTitre}</b>
                         <Container sx={{
                             display: "flex",
                             flexDirection: "row",
@@ -79,7 +88,7 @@ export default function UGram() {
                             flexDirection: "column"
                         }
                     }}>
-                        <h3>Pour éviter le plagiat, le code de ce projet ne peut être partager pour le moment</h3>
+                        <h3>{textes.projetsUgramTexte}</h3>
                     </Container>
                     <Container sx={{
                         display: "flex",

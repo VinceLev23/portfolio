@@ -6,11 +6,21 @@ import Photo1 from '../assets/UFood/UFood1.png'
 import Photo2 from '../assets/UFood/UFood2.png'
 import Photo3 from '../assets/UFood/UFood3.png'
 import Photo4 from '../assets/UFood/UFood4.png'
-
+import traductions from "../components/Traductions/Traductions.json";
+import React from "react";
+import { Context } from "../App";
 
 const photos = [Photo1, Photo2, Photo3, Photo4];
 
 export default function UFood() {
+
+    const [lang, setLang] = React.useContext(Context);
+    const [textes, setTextes] = React.useState<any>({});
+
+    React.useEffect(() => {
+        setTextes(traductions[lang as keyof typeof traductions]);
+    }, [lang]);
+
     return (
         <>
             <Container sx={{
@@ -35,7 +45,7 @@ export default function UFood() {
                 }}>
                     <Container >
                         <h2>UFood</h2>
-                        <p>Application de recherche de restaurants développée dans le cadre d'un cours universitaire</p>
+                        <p>{textes.projetsUFoodTexte}</p>
                     </Container>
                     <Container sx={{
 
@@ -43,7 +53,7 @@ export default function UFood() {
                             marginTop: 2
                         }
                     }}>
-                        <b>Outils utilisés</b>
+                        <b>{textes.projetsOutilsTitre}</b>
                         <ul>
                             <li>VueJs</li>
                             <li>Vuetify</li>
@@ -68,7 +78,7 @@ export default function UFood() {
                             flexDirection: "column"
                         }
                     }}>
-                        <h3>Voir le projet sur Github</h3>
+                        <h3>{textes.projetsUFoodGitHub}</h3>
                         <RedirectButton url={"https://github.com/VinceLev23/UFood_vueJS"} text={<GitHubIcon sx={{ color: "#EFE1DD" }} />} />
                     </Container>
                     <Container sx={{

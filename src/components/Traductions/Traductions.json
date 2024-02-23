@@ -1,0 +1,37 @@
+{
+    "fr": {
+        "homeTitre": "Développeur Front-End",
+        "homeTextTitle": "Réinventer le Web, Ligne par Ligne",
+        "homeText": "Développeur Web Front-End passionné, avide de résoudre des énigmes numériques et de repousser les limites de la créativité. Je m'immerge dans les défis du développement pour mieux les dompter, et chaque obstacle est une opportunité d'apprentissage. Car pour moi, le développement web est bien plus qu'une simple compétence technique : c'est une passion qui alimente ma soif de connaissance et d'innovation. Prêt à explorer de nouveaux horizons et à transformer des idées en réalité digitale, je suis ici pour façonner l'avenir du web, une ligne de code à la fois.",
+        "projetsTitre": "Mes Projets",
+        "projetsDesignTitre": "Conception Web",
+        "projetsOutilsTitre": "Outils utilisés",
+        "projetsBoutonSite": "Visiter le site",
+        "projetsUFoodTexte": "Application de recherche de restaurants développée dans le cadre d'un cours universitaire",
+        "projetsUFoodGitHub": "Voir le code source sur GitHub",
+        "projetsUGramDescription": "Application similaire à Instagram développée dans le cadre d'un cours universitaire (En cours de développement)",
+        "projetsUgramTexte": "Pour éviter le plagiat, le code source de ce projet ne peut être partagé pour le moment",
+        "contactTitre": "Contact",
+        "cv": "Accéder à mon CV",
+        "cvDownload": "../assets/CV_portfolio.pdf",
+        "navBarProjets": "Projets",
+        "navBarContact": "Contact"
+    },
+    "en": {
+        "homeTitre": "Front-End Developer",
+        "homeTextTitle": "Reinventing the Web, Line by Line",
+        "homeText": "Passionate Front-End Web Developer, eager to solve digital puzzles and push the boundaries of creativity. I immerse myself in the challenges of development to better tame them, and every obstacle is an opportunity for learning. Because for me, web development is much more than just a technical skill: it's a passion that fuels my thirst for knowledge and innovation. Ready to explore new horizons and turn ideas into digital reality, I'm here to shape the future of the web, one line of code at a time.",
+        "projetsTitre": "My Projects",
+        "projetsDesignTitre": "Web Design",
+        "projetsOutilsTitre": "Tools used",
+        "projetsBoutonSite": "Visit the site",
+        "projetsUFoodTexte": "Restaurant search application developed as part of a university course",
+        "projetsUFoodGitHub": "View the source code on GitHub",
+        "projetsUGramDescription": "Instagram-like application developed as part of a university course (In development)",
+        "projetsUgramTexte": "To avoid plagiarism, the source code of this project cannot be shared at the moment",
+        "contactTitre": "Contact",
+        "cv": "Check my resume",
+        "navBarProjets": "Projects",
+        "navBarContact": "Contact"
+    }
+}

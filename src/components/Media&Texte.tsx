@@ -1,11 +1,21 @@
 import { Container } from "@mui/material";
 import MyPhoto from "../assets/ProfilePic.png"
 import CV from "../Pages/CV";
-import PDF_URL from "../assets/CV_portfolio.pdf"
+import React from "react";
+import { Context } from "../App";
+import traductions from "../components/Traductions/Traductions.json";
+import PDF_URL_FR from "../assets/CV_portfolio_fr.pdf"
+import PDF_URL_EN from "../assets/CV_portfolio_en.pdf"
 
 
 export default function MediaTexte() {
 
+    const [lang, setLang] = React.useContext(Context);
+    const [textes, setTextes] = React.useState<any>({});
+
+    React.useEffect(() => {
+        setTextes(traductions[lang as keyof typeof traductions]);
+    }, [lang]);
     const myImage = <img
         src={MyPhoto}
         style={{
@@ -14,20 +24,8 @@ export default function MediaTexte() {
             borderRadius: "25%",
         }} />
 
-    const myText = <div>
-        <h3>Réinventer le Web, Ligne par Ligne</h3>
-        <div>
-            Développeur Web Front-End passionné, avide de résoudre des énigmes
-            numériques et de repousser les limites de la créativité.
-            Je m'immerge dans les défis du développement pour mieux les dompter,
-            et chaque obstacle est une opportunité d'apprentissage. Car pour moi,
-            le développement web est bien plus qu'une simple compétence technique :
-            c'est une passion qui alimente ma soif de connaissance et d'innovation.
-            Prêt à explorer de nouveaux horizons et à transformer des idées en
-            réalité digitale, je suis ici pour façonner l'avenir du web, une ligne
-            de code à la fois.
-        </div>
-    </div>
+
+    const pdfUrl = lang === "fr" ? PDF_URL_FR : PDF_URL_EN;
 
     return (
         <>
@@ -51,8 +49,9 @@ export default function MediaTexte() {
                         paddingBottom: 5
                     }}
                 >
-                    {myText}
-                    <CV pdfUrl={PDF_URL} />
+                    <h1>{textes.homeTextTitle}</h1>
+                    <div>{textes.homeText}</div>
+                    <CV pdfUrl={pdfUrl} />
                 </Container>
 
                 <Container

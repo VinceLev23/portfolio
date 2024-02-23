@@ -1,8 +1,18 @@
 import { Container } from "@mui/material";
 import RedirectButton from "./RedirectButton";
+import traductions from "../components/Traductions/Traductions.json";
+import React from "react";
+import { Context } from "../App";
 
 
 export default function DesignWeb() {
+
+    const [lang, setLang] = React.useContext(Context);
+    const [textes, setTextes] = React.useState<any>({});
+
+    React.useEffect(() => {
+        setTextes(traductions[lang as keyof typeof traductions]);
+    }, [lang]);
     return (
         <>
             <Container sx={{
@@ -26,7 +36,7 @@ export default function DesignWeb() {
                     }
                 }}>
                     <Container >
-                        <h2>Design Web</h2>
+                        <h2>{textes.projetsDesignTitre}</h2>
                     </Container>
                     <Container sx={{
 
@@ -34,7 +44,7 @@ export default function DesignWeb() {
                             marginTop: 2
                         }
                     }}>
-                        <b>Outils utilisés</b>
+                        <b>{textes.projetsOutilsTitre}</b>
                         <ul>
                             <li>Wix</li>
                             <li>Rubberduck</li>
@@ -60,7 +70,7 @@ export default function DesignWeb() {
                         }
                     }}>
                         <h3>Magasin général Le Brun</h3>
-                        <RedirectButton url={"https://www.magasingenerallebrun.com/fr"} text={"Voir le site"} />
+                        <RedirectButton url={"https://www.magasingenerallebrun.com/fr"} text={textes.projetsBoutonSite} />
                     </Container>
                     <Container sx={{
                         display: "flex",
@@ -72,7 +82,7 @@ export default function DesignWeb() {
                         }
                     }}>
                         <h3>Construction JSM</h3>
-                        <RedirectButton url={"https://www.constructionsjsm.ca/"} text={"Voir le site"} ></RedirectButton>
+                        <RedirectButton url={"https://www.constructionsjsm.ca/"} text={textes.projetsBoutonSite} ></RedirectButton>
                     </Container>
                 </Container>
             </Container>

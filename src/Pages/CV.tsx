@@ -1,10 +1,20 @@
 import { Button } from "@mui/material";
 import { UploadFile } from "@mui/icons-material";
+import React from "react";
+import { Context } from "../App";
+import traductions from "../components/Traductions/Traductions.json";
 
 const CV: React.FC<{ pdfUrl: string }> = ({ pdfUrl }) => {
     const openPdfInNewTab = () => {
         window.open(pdfUrl, '_blank');
     };
+
+    const [lang, setLang] = React.useContext(Context);
+    const [textes, setTextes] = React.useState<any>({});
+
+    React.useEffect(() => {
+        setTextes(traductions[lang as keyof typeof traductions]);
+    }, [lang]);
 
     return (
         <Button
@@ -18,7 +28,7 @@ const CV: React.FC<{ pdfUrl: string }> = ({ pdfUrl }) => {
                     backgroundColor: "#6897AF"
                 }
             }}>
-            Accédez à mon CV
+            {textes.cv}
         </Button>
     );
 };
