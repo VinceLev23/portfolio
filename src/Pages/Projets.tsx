@@ -4,6 +4,7 @@ import UpTransition from "../components/animation/UpTransition";
 import DesignWeb from "../components/DesignWeb";
 import Header from "../components/Header";
 import UFood from "../components/UFood";
+import UGram from "../components/UGram";
 
 
 export default function Projets() {
@@ -15,6 +16,7 @@ export default function Projets() {
                 <Header title={"Mes Projets"} />
                 <DesignWeb />
                 <UFood />
+                <UGram />
             </UpTransition>
         </>
     )
