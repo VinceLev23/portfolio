@@ -35,7 +35,7 @@ export default function UFood() {
                 }}>
                     <Container >
                         <h2>UFood</h2>
-                        <p>Application pour trouver des restaurants, développer dans le cadre d'un cours à l'université</p>
+                        <p>Application de recherche de restaurants développée dans le cadre d'un cours universitaire</p>
                     </Container>
                     <Container sx={{
 

@@ -33,7 +33,7 @@ export default function UGram() {
                 }}>
                     <Container >
                         <h2>UGram</h2>
-                        <p>Application similaire à Instagram, développer dans le cadre d'un cours à l'université <b>(EN COURS)</b></p>
+                        <p>Application similaire à Instagram développée dans le cadre d'un cours universitaire <b>(En cours de développement)</b></p>
                     </Container>
                     <Container sx={{
 
