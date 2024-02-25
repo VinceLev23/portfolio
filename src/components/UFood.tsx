@@ -48,7 +48,6 @@ export default function UFood() {
                         <p>{textes.projetsUFoodTexte}</p>
                     </Container>
                     <Container sx={{
-
                         '@media (max-width: 738px)': {
                             marginTop: 2
                         }

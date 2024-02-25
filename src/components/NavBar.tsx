@@ -75,7 +75,6 @@ export default function NavBar() {
                     }}>
                         <NavBarButton to="/projets" text={textes.navBarProjets} ></NavBarButton>
                         <NavBarButton to="/contact" text={textes.navBarContact} ></NavBarButton>
-                        <SocialMediaButton url={"https://www.linkedin.com/in/vincent-leveille30"} text={<LinkedInIcon sx={{ color: "#EFE1DD" }} />} />
                         <Button onClick={handleLangChange} sx={buttonStyle} >FR/EN</Button>
                     </Container>
                 </motion.div>

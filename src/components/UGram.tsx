@@ -45,16 +45,20 @@ export default function UGram() {
                         <p>{textes.projetsUGramDescription}</p>
                     </Container>
                     <Container sx={{
-
                         '@media (max-width: 738px)': {
                             marginTop: 2
-                        }
+
+                        },
+
                     }}>
                         <b>{textes.projetsOutilsTitre}</b>
                         <Container sx={{
                             display: "flex",
                             flexDirection: "row",
                             justifyContent: "flex-start",
+                            '@media (max-width: 428px)': {
+                                flexDirection: "column"
+                            }
                         }}>
                             <ul>
                                 <li>React</li>
