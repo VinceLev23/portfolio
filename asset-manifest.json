@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.cd771346.css",
-    "main.js": "/portfolio/static/js/main.a96efa62.js",
+    "main.js": "/portfolio/static/js/main.858805f7.js",
     "static/media/UFood1.png": "/portfolio/static/media/UFood1.89dd8bfdcf1ebb3f0baa.png",
     "static/media/UGram1.png": "/portfolio/static/media/UGram1.4501738010288294de1a.png",
     "static/media/UFood3.png": "/portfolio/static/media/UFood3.96db709333e2c75a91f5.png",
@@ -10,15 +10,15 @@
     "static/media/Ugram2.png": "/portfolio/static/media/Ugram2.a6183e412f521177eaf9.png",
     "static/media/UFood2.png": "/portfolio/static/media/UFood2.d962554b64330ec5374d.png",
     "static/media/CV_portfolio_fr.pdf": "/portfolio/static/media/CV_portfolio_fr.8f467f26e1841433abd6.pdf",
-    "static/media/CV_portfolio_en.pdf": "/portfolio/static/media/CV_portfolio_en.08f9fefb1ec254b8e757.pdf",
+    "static/media/CV_portfolio_en.pdf": "/portfolio/static/media/CV_portfolio_en.0b1882249c6e98aa3768.pdf",
     "static/media/UFood4.png": "/portfolio/static/media/UFood4.8ff4f1dbf893563476ec.png",
     "static/media/Ugram4.png": "/portfolio/static/media/Ugram4.d57eb24a9ba6fc54f884.png",
     "index.html": "/portfolio/index.html",
     "main.cd771346.css.map": "/portfolio/static/css/main.cd771346.css.map",
-    "main.a96efa62.js.map": "/portfolio/static/js/main.a96efa62.js.map"
+    "main.858805f7.js.map": "/portfolio/static/js/main.858805f7.js.map"
   },
   "entrypoints": [
     "static/css/main.cd771346.css",
-    "static/js/main.a96efa62.js"
+    "static/js/main.858805f7.js"
   ]
 }
