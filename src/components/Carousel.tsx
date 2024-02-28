@@ -65,8 +65,16 @@ export default function Carousel({ photos }: CarouselProps) {
                 </Container>
                 <Button sx={buttonStyle} onClick={nextPhoto}><ArrowForward /></Button>
             </Container>
-            <dialog open={open} onClose={handleClose}>
-                <Container sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <dialog
+                open={open}
+                onClose={handleClose}
+
+            >
+                <Container sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}>
                     <Button sx={buttonStyle} onClick={previousPhoto}><ArrowBack /></Button>
                     <img onClick={handleOpen} src={photos[index]} alt="photo" style={pictureStyleModal} />
                     <Button sx={buttonStyle} onClick={nextPhoto}><ArrowForward /></Button>
