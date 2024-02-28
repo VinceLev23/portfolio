@@ -1,4 +1,4 @@
-import { Button, Container } from "@mui/material"
+import { Button, Container, Typography } from "@mui/material"
 import UpTransition from "../components/animation/UpTransition";
 import RedirectButton from "../components/RedirectButton";
 import Header from "../components/Header";
@@ -40,16 +40,24 @@ export default function Contact() {
                 <Container sx={{ marginTop: 5 }}>
 
                     <Container sx={styleDeBoite}>
-                        <Container sx={styleDesTitres}><b>Email</b></Container>
-                        <Container>{email}</Container>
+                        <Container sx={styleDesTitres}>
+                            <b>Email</b>
+                        </Container>
+                        <Container><Typography variant="inherit" noWrap>
+                            {email}
+                        </Typography></Container>
                     </Container>
                     <Container sx={styleDeBoite}>
                         <Container sx={styleDesTitres}><b>LinkedIn </b></Container>
-                        <Container>{<SocialMediaButton url={"https://www.linkedin.com/in/vincent-leveille30"} text={<LinkedInIcon sx={{ color: "#EFE1DD", backgroundColor: "#31413D" }} />} />}</Container>
+                        <Container><Typography variant="inherit" noWrap>
+                            <SocialMediaButton url={"https://www.linkedin.com/in/vincent-leveille30"} text={<LinkedInIcon sx={{ color: "#EFE1DD", backgroundColor: "#31413D" }} />} />
+                        </Typography></Container>
                     </Container>
                     <Container sx={styleDeBoite}>
                         <Container sx={styleDesTitres}><b>Github</b></Container>
-                        <Container><RedirectButton url={"https://github.com/VinceLev23"} text={<GitHubIcon sx={{ color: "#EFE1DD" }} />} />
+                        <Container><Typography variant="inherit" noWrap>
+                            <RedirectButton url={"https://github.com/VinceLev23"} text={<GitHubIcon sx={{ color: "#EFE1DD" }} />} />
+                        </Typography>
                         </Container>
                     </Container>
                 </Container>

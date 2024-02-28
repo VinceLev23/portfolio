@@ -1,18 +1,25 @@
-import SocialMediaButton from "./SocialMediaButton";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Menu, MenuItem } from "@mui/material";
 import '../App.css';
 import NavBarButton from "./NavBarButton";
 import Logo from "../assets/Logo.jpg"
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import React from "react";
 import { Button } from "@mui/material";
 import { Context } from "../App";
 import traductions from "../components/Traductions/Traductions.json";
+import MenuIcon from '@mui/icons-material/Menu';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+
 
 const buttonStyle = {
-    color: "#DAE9CF"
+    color: "#DAE9CF",
+    backgroundColor: "#262626",
+    elevation: 0,
+    '&:hover': {
+        backgroundColor: "#31413D"
+
+    }
 }
 export default function NavBar() {
 
@@ -70,12 +77,44 @@ export default function NavBar() {
 
 
                     <Container sx={{
-                        display: "flex",
-                        justifyContent: "flex-end"
+                        display: { xs: "none", sm: "flex", md: "flex", lg: "flex" },
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        gap: 1,
                     }}>
                         <NavBarButton to="/projets" text={textes.navBarProjets} ></NavBarButton>
                         <NavBarButton to="/contact" text={textes.navBarContact} ></NavBarButton>
                         <Button onClick={handleLangChange} sx={buttonStyle} >FR/EN</Button>
+                    </Container>
+                    <Container sx={{
+                        display: { xs: "flex", sm: "none", md: "none", lg: "none" },
+                        justifyContent: "flex-end",
+
+                    }}>
+                        <PopupState variant="popover">
+                            {(popupState) => (
+                                <React.Fragment>
+                                    <Button sx={buttonStyle} variant="contained" {...bindTrigger(popupState)}>
+                                        <MenuIcon sx={{ color: "#DAE9CF" }}></MenuIcon>
+                                    </Button>
+                                    <Menu {...bindMenu(popupState)}
+                                        PaperProps={{ sx: { backgroundColor: "#262626" } }}
+                                        anchorOrigin={{
+                                            vertical: 'bottom',
+                                            horizontal: 'right',
+                                        }}
+                                        transformOrigin={{
+                                            vertical: 'top',
+                                            horizontal: 'right',
+                                        }}
+                                    >
+                                        <MenuItem sx={buttonStyle} onClick={popupState.close}><NavBarButton to="/projets" text={textes.navBarProjets} ></NavBarButton></MenuItem>
+                                        <MenuItem sx={buttonStyle} onClick={popupState.close}><NavBarButton to="/contact" text={textes.navBarContact} ></NavBarButton></MenuItem>
+                                        <MenuItem sx={buttonStyle} onClick={popupState.close}><Button onClick={handleLangChange} sx={buttonStyle} >FR/EN</Button></MenuItem>
+                                    </Menu>
+                                </React.Fragment>
+                            )}
+                        </PopupState>
                     </Container>
                 </motion.div>
             </Container>
