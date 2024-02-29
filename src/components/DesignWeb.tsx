@@ -50,6 +50,7 @@ export default function DesignWeb() {
                             <li>Rubberduck</li>
                             <li>Canva</li>
                             <li>Photoshop</li>
+                            <li>HTML/CSS</li>
                         </ul>
                     </Container>
                 </Container>
